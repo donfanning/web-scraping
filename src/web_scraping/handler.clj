@@ -9,7 +9,7 @@
 (defroutes app-routes
            (GET "/" [] "Hello World")
            (GET "/posts" [] (core/posts))
-           (GET "/posts/:area-code" [area-code] area-code)
+           (GET "/posts/:area-code" [area-code] (core/filtered-posts area-code))
            (GET "/area-codes" [] (core/area-codes))
            (GET "/phone-numbers" [] (core/phone-numbers))
            (GET "/report-amounts" [] (core/report-amounts))
