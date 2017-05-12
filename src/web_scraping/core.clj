@@ -66,7 +66,10 @@
 
 (defn filter-posts
   [area-code]
-  (filter #(= (:area-code %) area-code) (posts)))
+  (if (string? area-code)
+    (let [parsed-int (utils/parse-int area-code)]
+      (filter #(= (:area-code %) parsed-int) (posts)))
+    (filter #(= (:area-code %) area-code) (posts))))
 
 (defn filtered-posts
   [area-code]
