@@ -4,16 +4,16 @@
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
             [ring.middleware.json :as middleware]
-            [web-scraping.core]))
+            [web-scraping.core :as core]))
 
 (defroutes app-routes
            (GET "/" [] "Hello World")
-           (GET "/posts" [] "Posts")
+           (GET "/posts" [] (core/posts))
            (GET "/posts/:area-code" [area-code] area-code)
-           (GET "/area-code" [] "Area Codes")
-           (GET "/phone-number" [] "Phone Numbers")
-           (GET "/amount-comments" [] "Amount of Comments")
-           (GET "/comment-content" [] "Comment Content")
+           (GET "/area-codes" [] (core/area-codes))
+           (GET "/phone-numbers" [] (core/phone-numbers))
+           (GET "/report-amounts" [] (core/report-amounts))
+           (GET "/comment-contents" [] (core/comment-contents))
            (route/not-found "Not Found"))
 
 (def app
