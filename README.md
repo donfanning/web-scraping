@@ -1,28 +1,38 @@
 # web-scraping
 
-FIXME: description
+This is a web-scraper which creates a RESTful API of this website:
+https://s3.us-east-2.amazonaws.com/gsd-auth-callinfo/callnotes.html
 
 ## Installation
 
-Download from http://example.com/FIXME.
+1. Install [Leiningen](https://leiningen.org/)
+
+2. Clone this library.
 
 ## Usage
 
-FIXME: explanation
+To start the server, change directory to this library and run this command:
 
-    $ java -jar web-scraping-0.1.0-standalone.jar [args]
+```lein ring server```
 
-## Options
+The server should be accessible at http://localhost:3000. There are several routes that you can access:
 
-FIXME: listing of options this app accepts.
+/posts
+
+/posts/### (Note: This route will only show results which contain the 3-digit area-code put into the URI. If no results are found, then the page will be empty.)
+
+/area-codes
+
+/phone-numbers
+
+/report-amounts
+
+/comment-contents
 
 ## Examples
 
-...
+As of 05/12/2017, accessing http://localhost:3000/posts/844 should give one result.
 
-### Bugs
-
-...
 
 ### Any Other Sections
 ### That You Think
@@ -30,7 +40,7 @@ FIXME: listing of options this app accepts.
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Paul Nguyen
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

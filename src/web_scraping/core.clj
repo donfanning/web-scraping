@@ -46,7 +46,7 @@
 
 (defn pull-report-amounts
   []
-  (map html/text (html/select (fetch-url *base-url*) [:div.oos_previewSide])))
+  (map utils/parse-int (map html/text (html/select (fetch-url *base-url*) [:div.oos_previewSide]))))
 
 (defn report-amounts
   []
