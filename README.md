@@ -35,11 +35,6 @@ The server should be accessible at http://localhost:3000. There are several rout
 
 As of 05/12/2017, accessing http://localhost:3000/posts/844 should give one result.
 
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
 ## License
 
 Copyright © 2017 Paul Nguyen
