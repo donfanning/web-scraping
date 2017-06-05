@@ -9,6 +9,8 @@ https://s3.us-east-2.amazonaws.com/gsd-auth-callinfo/callnotes.html
 
 2. Clone this library.
 
+3. Using command prompt, run ```lein test``` in this directory
+
 ## Usage
 
 To start the server, change directory to this library and run this command:
