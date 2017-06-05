@@ -9,7 +9,7 @@ https://s3.us-east-2.amazonaws.com/gsd-auth-callinfo/callnotes.html
 
 2. Clone this library.
 
-3. Using command prompt, run ```lein test``` in this directory
+3. To run tests using command prompt, run ```lein test``` in project root directory
 
 ## Usage
 
